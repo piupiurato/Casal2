@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background: #fbeffb;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  background: #fff;
+  border-radius: 10px;
+  width: 350px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #ff69b4;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat-box {
+  padding: 10px;
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffe6f0;
+}
+
+.mensagem {
+  max-width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  animation: aparecer 0.5s ease;
+}
+
+.mensagem.eu {
+  background: #d1ffd1;
+  align-self: flex-end;
+}
+
+.mensagem.ela {
+  background: #ffffff;
+  align-self: flex-start;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #ff1493;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
